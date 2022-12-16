@@ -151,6 +151,40 @@ let finances = [
 
     console.log(diffMonth);
 
+    let totalDiff = 0
+
+    for (let i = 0; i < diffMonth.length; i++) {
+      totalDiff += diffMonth[i];
+      
+    }
+    
+    let Avg = totalDiff / diffMonth.length;
+
+    console.log(Avg);
+
+    const num1 = Avg;
+const result1 = num1.toFixed(2);
+console.log(result1);
+
+  //   function sumofArray(sum, num) {
+  //     return sum + num;
+  // }
+  // function myGeeks(item) {
+  //     document.getElementById("GFG").innerHTML
+  //             = diffMonth.reduce(sumofArray);
+
+    // function sumArray(array) {
+    //   const ourArray = diffMonth;
+    //   let sum = 0;
+    
+    //   for (let i = 0; i < ourArray.length; i += 1) {
+    //     sum += ourArray[i];
+    //   }
+      
+    //   return sum;
+    // }
+    
+    // console.log(sumArray);
     
       // So, we need to arr.push() each new 'change' value to the new array
     // Need a variable to store greatest amount of change (+)
