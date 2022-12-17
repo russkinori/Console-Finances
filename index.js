@@ -90,6 +90,7 @@ let finances = [
 //How do I find the total number of months
     //totalMonths = length of the array
 
+
     let totalMonths = finances.length;
 
     console.log(totalMonths);
@@ -198,9 +199,6 @@ console.log(result1);
       // So, we need to arr.push() each new 'change' value to the new array
     // Need a variable to store greatest amount of change (+)
 
-    let financesNew = [changedDate + diffMonth];
-    console.log(financesNew);
-
     let greatestProfit = Math.min(...diffMonth);
     let greatestLost = Math.max(...diffMonth);
 
@@ -212,9 +210,15 @@ console.log(result1);
     console.log(changedDate[41]);
     console.log(changedDate[60]);
 
-    
+    let financesNew = [];
 
-    
+    for ( let i = 0; i < diffMonth.length; i++ ) {
+      financesNew.push( [ changedDate[i], diffMonth[i] ] );
+    }
+
+    console.log(financesNew);
+
+    console.log(Math.max(...financesNew));
 
 
     // Need a variable to store greatest amount of change (-)
