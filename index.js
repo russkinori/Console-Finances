@@ -124,11 +124,15 @@ let finances = [
 
   let changedArray = [];
 
+  let changedDate = [];
+
    
   for (let i = finances.length - 1; i >= 0; i--) {
         const[date, amount] = finances[i];
         
-        // console.log(amount); 
+        // console.log(date); 
+
+        changedDate.push(date)
 
         changedArray.push(amount);
         //  Changes = changedArray[i][1] - changedArray[i-1][1];
@@ -138,8 +142,13 @@ let finances = [
         //  totalChanges += Changes
       }
 
+      console.log(changedDate)
+
+       
+
+       
     //   console.log(totalChanges)
-      console.log(changedArray);
+      // console.log(changedArray);
     // Each iteration, subtract the data at position [1] of the previous element from the data at position [1] of the current element
     // Put that data into a new array variable
     
@@ -188,7 +197,28 @@ console.log(result1);
     
       // So, we need to arr.push() each new 'change' value to the new array
     // Need a variable to store greatest amount of change (+)
+
+    let financesNew = [changedDate + diffMonth];
+    console.log(financesNew);
+
+    let greatestProfit = Math.min(...diffMonth);
+    let greatestLost = Math.max(...diffMonth);
+
+    console.log(greatestProfit);
+    console.log(greatestLost);
+
+    console.log(diffMonth.indexOf(greatestLost));
+    console.log(diffMonth.indexOf(greatestProfit));
+    console.log(changedDate[41]);
+    console.log(changedDate[60]);
+
+    
+
+    
+
+
     // Need a variable to store greatest amount of change (-)
+    
     // Each iteration, compare the difference to the previous difference
     // If it's higher than what's already stored in greatest-profit variable, reassign that variable to equal finances[i]
       // greatest[0] = finances[i][0]
