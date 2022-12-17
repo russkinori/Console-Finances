@@ -87,159 +87,122 @@ let finances = [
 ['Feb-2017', 671099]
 ];
 
-//How do I find the total number of months
+//How do I find the total number of months?
+  //Find the length of the array
     //totalMonths = length of the array
-    //Create an variable for total months
-    //Console log to view
-    let totalMonths = finances.length;
+    
 
-    console.log(totalMonths);
+  //Create an variable for total months with the .length attribute
+  let totalMonths = finances.length;
 
-    document.write(totalMonths + " total months included in the dataset. ");
+  //Display results in the console
+  console.log("Total months = " + totalMonths);
 
 
-//How do I find the net total of Profit/Losses
-    //netTotalProfitLoss = the sum total of all months
-    //Create a variable for net total profit/loss
-    //Use a for loop to extract the amount column and find the sum of the objects
-    let netTotalProfitLoss = 0;
+//How do I find the net total of Profit/Losses?
+  //Find the sum of the objects in the amounts column
+    //netTotalProfitLoss = the sum amounts of all months
+   
+  //Create a variable for net total profit/loss
+  let netTotalProfitLoss = 0;
 
-    for (let i = 0; i < totalMonths; i++) {
-        const [date, amount] = finances[i];
+  //Use a for loop to separate the two columns
+  for (let i = 0; i < totalMonths; i++) {
+      const [date, amount] = finances[i];
 
-        //How do I confirm extraction
-            // console.log(amount);
+      //Confirm the extraction
+      // console.log(amount);
 
-        //How do I sum up the column
-        netTotalProfitLoss += amount;       
-    }
+      //Sum up the objects in the amount column
+      netTotalProfitLoss += amount;       
+  }
 
-    console.log(netTotalProfitLoss)
+  //Display results in the console
+  console.log("The net total amount of Profit/Loss over the entire period is " + netTotalProfitLoss);
+
 
 //How do I find the total average of the Profit/Loss changes over the entire period
+//Find the total average changes and the total number of months  
+//Divide the total average change by the total number of months
+  //totalAvgProfitLoss = totalAvgChanges / totalMonths
+  //How do I find the total average changes
     //Find the average change 
-    //Divide the average change by the total number of months
+    //Find the sum of all average changes 
     //How do I find the average change 
-        //Find the accumulative difference between the previous and next months
-          //How do I find the cummulative difference
-            //Subtract the previous month from the next month
-          //Change the sort order to start from the last month and value
-            //How do I change the sort order
-              //Use a for loop that reverses the order
-        // Create a variable for the average changes
-        // Create an array for the reversed amount values
-        //Create an array for the reversed dates
-
-  let avgChanges = 0;
-
+      //Find the difference between the previous and next months
+        //How do I find the difference
+          //Subtract the previous month from the next month
+          //Consider reversing the sort order to make calculations easier
+          //How do I reverse the sort order
+            //Use a for loop that decrements the finance array       
+        
+  //Create an array for the reversed dates
   let dateReversed = [];
 
+  // Create an array for the reversed amount values
   let amountReversed = [];
-   
-  for (let i = finances.length - 1; i >= 0; i--) {
-        const[date, amount] = finances[i];
-        
-        // console.log(amount); 
 
+  //Create a for loop to reverse the order of the finance array and extract the data
+  for (let i = finances.length - 1; i >= 0; i--) {
+
+        //Split the data in the finance array
+        const[date, amount] = finances[i];
+
+        //confirm the spit
+        // console.log(date); 
+        // console.log(amount);
+
+        //Parse the extracted date data to the empty dateReversed array
         dateReversed.push(date)
 
+        //Parse the split amount data to the empty amountReversed array
         amountReversed.push(amount);
-          
-        //  console.log(Changes);
 
-        //  totalChanges += Changes
       }
-
-      document.write(amountReversed);
-      console.log(dateReversed);
-
-       
-
-       
-    //   console.log(totalChanges)
-      // console.log(amountReversed);
+  //Confirm that the arrays were populated
+  console.log(dateReversed);      
+  console.log(amountReversed);
     
-    let diffMonth =[]
+  let avgChanges =[]
 
-    for (let i = 0; i < totalMonths - 1; i++) {
-        diffMonth.push(amountReversed[i] - amountReversed[i+1]);
-    }
+  for (let i = 0; i < totalMonths - 1; i++) {
+    avgChanges.push(amountReversed[i] - amountReversed[i+1]);
+  }
 
-    console.log(diffMonth);
+  console.log(avgChanges);
 
-    let totalDiff = 0
+  let totalDiff = 0
 
-    for (let i = 0; i < diffMonth.length; i++) {
-      totalDiff += diffMonth[i];
-      
-    }
+  for (let i = 0; i < avgChanges.length; i++) {
+    totalDiff += avgChanges[i];
     
-    let Avg = totalDiff / diffMonth.length;
+  }
+  
+  let Avg = totalDiff / avgChanges.length;
 
-    console.log(Avg);
+  console.log(Avg);
 
-    const num1 = Avg;
+  const num1 = Avg;
 const result1 = num1.toFixed(2);
 console.log(result1);
 
-  //   function sumofArray(sum, num) {
-  //     return sum + num;
-  // }
-  // function myGeeks(item) {
-  //     document.getElementById("GFG").innerHTML
-  //             = diffMonth.reduce(sumofArray);
 
-    // function sumArray(array) {
-    //   const ourArray = diffMonth;
-    //   let sum = 0;
-    
-    //   for (let i = 0; i < ourArray.length; i += 1) {
-    //     sum += ourArray[i];
-    //   }
-      
-    //   return sum;
-    // }
-    
-    // console.log(sumArray);
-    
-      // So, we need to arr.push() each new 'change' value to the new array
-    // Need a variable to store greatest amount of change (+)
 
-    let greatestProfit = Math.min(...diffMonth);
-    let greatestLost = Math.max(...diffMonth);
+    let greatestProfit = Math.min(...avgChanges);
+    let greatestLost = Math.max(...avgChanges);
 
     console.log(greatestProfit);
     console.log(greatestLost);
 
-    console.log(diffMonth.indexOf(greatestLost));
-    console.log(diffMonth.indexOf(greatestProfit));
+    console.log(avgChanges.indexOf(greatestLost));
+    console.log(avgChanges.indexOf(greatestProfit));
     console.log(dateReversed[41]);
     console.log(dateReversed[60]);
 
-    let financesNew = [];
+    // let financesNew = [];
 
-    for ( let i = 0; i < diffMonth.length; i++ ) {
-      financesNew.push( [ dateReversed[i], diffMonth[i] ] );
-    }
+    // for ( let i = 0; i < avgChanges.length; i++ ) {
+    //   financesNew.push( [ dateReversed[i], avgChanges[i] ] );
+    // }
 
-    console.log(financesNew);
-
-
-
-    // Need a variable to store greatest amount of change (-)
-    
-    // Each iteration, compare the difference to the previous difference
-    // If it's higher than what's already stored in greatest-profit variable, reassign that variable to equal finances[i]
-      // greatest[0] = finances[i][0]
-      // greatest[1] = changeArr[i-1]
-    // If it's lower than what's already stored in greatest-loss variable, reassign that variable to equal finances[i]
-
-  // Add up the total in the new 'changes' array
-    // Need a variable to store the rolling total for this array that's different that the rolling total of profits
-    // for loop to iterate over the changes array
-      // add each element in turn to the rolling total
-
-  // Take that 'total changes amount' variable and divide it by the number of elements in the array
-    // Look up how to limit the answer to two decimal points
-
-
+    // console.log(financesNew);
