@@ -106,15 +106,11 @@ let finances = [
   //Create a variable for net total profit/loss
   let netTotalProfitLoss = 0;
 
-  //Use a for loop to separate the two columns
+  //Use a for loop to sum up the amounts column
   for (let i = 0; i < totalMonths; i++) {
-      const [date, amount] = finances[i];
-
-      //Confirm the extraction
-      // console.log(amount);
 
       //Sum up the objects in the amount column
-      netTotalProfitLoss += amount;       
+      netTotalProfitLoss += finances[i][1];       
   }
 
   //Display results in the console
@@ -143,7 +139,7 @@ let finances = [
   let amountReversed = [];
 
   //Create a for loop to reverse the order of the finance array and extract the data
-  for (let i = finances.length - 1; i >= 0; i--) {
+  for (let i = totalMonths - 1; i >= 0; i--) {
 
         //Split the data in the finance array
         const[date, amount] = finances[i];
