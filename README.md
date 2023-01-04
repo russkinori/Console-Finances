@@ -7,7 +7,13 @@ This repo utilizes the concepts learned in Javascript to address a real-world ex
 Skills used cover psuedocoding and the fundamentals of Javascript, including variables, for loops, math, multidimensional arrays and conditional logic. 
 
 ## Issues
-I encountered difficulty in querying the 2D array so used a lengthy approach of extracting the data into a normal array, performing the required operations then querying indices of each new array to realign and retrieve the values required. This is due to my limited knowledge and inability to attain relevant information to adequately find the average of differences for 1 column in a 2D array, despite finding ample information for calculating the average of a column. 
+I had difficulty completing the analysis by operating directly with the 2D array, so I used the lengthy approach of extracting the data into a two separate arrays, performing the required operations on the single array, then querying indices of each new array to realign and retrieve the values required. This was due to my limited knowledge and inability to attain relevant information to adequately find the average of differences for 1 column within a 2D array. Although, I did find ample information for calculating the average of a column, the required method to find the average of the differences was never included. 
+
+
+
+## Usage
+
+
 
 
 
@@ -22,3 +28,8 @@ Materials used to facilitate the learning experience can be found via the links 
 - https://youtu.be/CXsnNQ51AdQ
 - https://youtu.be/QgUnJhUTGoI
 - https://stackoverflow.com/questions/10623635/combine-2-arrays-into-a-multidimensional-array
+
+
+## Licence
+
+Licensed under the [MIT](./LICENSE)
