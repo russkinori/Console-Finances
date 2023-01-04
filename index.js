@@ -168,6 +168,7 @@ console.log("-------------------------")
 
   console.log("Average change: " + totalAvgProfitLoss.toFixed(2));        // Display the total average of profit/loss changes to 2 decimal points
 
+  
 // How do I find the greatest increase in profits (date and amount) over the time period
   //Find the highest amount change from month to month
   //Align the value with the date 
@@ -181,11 +182,9 @@ console.log("-------------------------")
   // Retrieve the index of the highest change value 
   // console.log("The greatest increase in profits is at index " + avgChanges.indexOf(greatestProfitAmount));
 
-  //Create a variable and retrieve the date at the same index from the dateReversed
-  let greatestProfitDate = dateReversed[60];
+  let greatestProfitDate = dateReversed[60];        //Create a variable and retrieve the date at the same index from the dateReversed
 
-  // Display the greatest increase in profits over the time period
-  console.log("Greatest increase in profits: " + greatestProfitDate + " ($"+ greatestProfitAmount + ")")
+  console.log("Greatest increase in profits: " + greatestProfitDate + " ($"+ greatestProfitAmount + ")")        // Display the greatest increase in profits over the time period
   
   
 // How do I find the greatest decrease in losses (date and amount) over the time period
@@ -203,15 +202,4 @@ console.log("-------------------------")
   
   greatestLossDate = dateReversed[41];         //Create a variable and retrieve the date at the same index from the dateReversed array
 
-  // Display the greatest decrease in losses over the time period
-  console.log("Greatest Decrease Profits: " + greatestLossDate + " ($" + greatestLossAmount + ")" )
-
-  
-
-    // let financesNew = [];
-
-    // for ( let i = 0; i < avgChanges.length; i++ ) {
-    //   financesNew.push( [ dateReversed[i], avgChanges[i] ] );
-    // }
-
-    // console.log(financesNew);
+  console.log("Greatest Decrease Profits: " + greatestLossDate + " ($" + greatestLossAmount + ")" )         // Display the greatest decrease in losses over the time period
