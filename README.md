@@ -2,13 +2,13 @@
 
 ## Description
 
-This repo utilizes the concepts learned in Javascript to address a real-world example. The task was to create code for analyzing the financial records of a company from a financial dataset which was provided. 
+This repo utilizes the concepts learned in Javascript fundamentals to address a real-world example. The task was to create code for analyzing the financial records of a company from a financial dataset which was provided. 
 
-Skills used included psuedocoding and Javascript fundamentals, such as variables, for loops, math, multidimensional arrays and conditional logic.
+Skills used include psuedocoding, variables, for loops, math, multidimensional arrays and conditional logic.
 
 ## Issues
 
-I had difficulty completing the analysis by operating directly with the 2D array, so I used the lengthy approach of extracting the data into a two separate arrays, performing the required operations on the single array, then querying indices of each new array to realign and retrieve the values required. This was due to my limited knowledge and inability to attain relevant information to adequately find the average of differences for 1 column within a 2D array. Although, I did find ample information for calculating the average of a column, the required method to find the average of the differences was never included. 
+I had difficulty completing the analysis by operating directly with the 2D array, so I used the lengthy approach of extracting the data into a two separate arrays, performing the required operations on the single array, then querying indices of each new array to realign and retrieve the values required. This was due to my limited knowledge and inability to attain relevant information to adequately find the average of differences for one element within a 2D array, without the use of functions which is beyond the scope of this fundamentals project. Although, I found ample information for calculating the average of a column, the required method to find the average of the differences was never included. 
 
 ## Usage
 
